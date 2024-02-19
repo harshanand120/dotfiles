@@ -1,7 +1,7 @@
-PROMPT="%(?:%{[01;32m%}➜ :%{[01;31m%}➜ )"
-PROMPT+=' %{[36m%}%~%{[00m%} %{[01;34m%}git:(%{[31m%}main%{[34m%})%{[00m%} '
+PROMPT="%(?:%{$fg_bold[green]%}➜ :%{$fg_bold[red]%}➜ ) %{$fg[cyan]%}%~%{$reset_color%}"
+PROMPT+=' $(git_prompt_info)'
 
-ZSH_THEME_GIT_PROMPT_PREFIX="%{[01;34m%}git:(%{[31m%}"
-ZSH_THEME_GIT_PROMPT_SUFFIX="%{[00m%} "
-ZSH_THEME_GIT_PROMPT_DIRTY="%{[34m%}) %{[33m%}✗"
-ZSH_THEME_GIT_PROMPT_CLEAN="%{[34m%})" 
+ZSH_THEME_GIT_PROMPT_PREFIX="%{$fg_bold[blue]%}git:(%{$fg[red]%}"
+ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%} "
+ZSH_THEME_GIT_PROMPT_DIRTY="%{$fg[blue]%}) %{$fg[yellow]%}✗"
+ZSH_THEME_GIT_PROMPT_CLEAN="%{$fg[blue]%})"
